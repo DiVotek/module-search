@@ -2,6 +2,7 @@
 
 namespace Modules\Search\Admin;
 
+use App\Services\Schema;
 use App\Services\TableSchema;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -39,7 +40,7 @@ class TagResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Schema::getName()
             ]);
     }
 
