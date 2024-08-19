@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create(Tag::getDb(), function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('sorting')->default(0);
             $table->morphs('taggable');
             Tag::timestampFields($table);
         });

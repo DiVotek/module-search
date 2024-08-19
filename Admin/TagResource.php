@@ -51,6 +51,7 @@ class TagResource extends Resource
                 TableSchema::getName(),
                 TableSchema::getUpdatedAt()
             ])
+            ->reorderable('sorting')
             ->headerActions([
                 Action::make(__('Help'))
                     ->iconButton()

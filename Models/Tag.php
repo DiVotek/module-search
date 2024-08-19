@@ -2,6 +2,7 @@
 
 namespace Modules\Search\Models;
 
+use App\Traits\HasSorting;
 use App\Traits\HasTable;
 use App\Traits\HasTimestamps;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -12,6 +13,7 @@ class Tag extends Model
 {
     use HasFactory;
     use HasTable;
+    use HasSorting;
     use HasTimestamps;
 
     protected $fillable = ['name'];
